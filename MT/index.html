@@ -1,0 +1,2361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>美团</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/index.css" />
+<script src="js/base.js"></script>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/move.js"></script>
+<script src="js/mt.js"></script>
+<script>
+$(function (){
+	meituan.public.navTop($('.j-nav-top'));//nav顶对+obj宽度
+	meituan.public.dropdDown($('.j-show-box>li'));//下拉
+	meituan.public.clicKnone($('.j-clicknone'));//点击消失
+	meituan.public.toUp($('#j-toUp'));//回到顶部
+	
+	meituan.public.headSearch($('.j-search'));//头部搜索框
+	
+	
+	meituan.index.newYear($('.j-newYeBtn'));//newyear
+	meituan.index.countdown($('.j-countdown'),'24,0,0');//倒计时
+	
+		
+	meituan.index.tab($('.j-tab'));//选项卡
+	meituan.index.navMore($('.j-nav-more'));//nav更多
+	meituan.index.navSide($('.j-navSide'));//navSide
+	meituan.index.scrollRight($('.j-scrollR'));/*nav无缝滚动-*/
+	meituan.index.scrollRight($('.j-scrollShop'));/*shop无缝滚动-*/
+	
+	meituan.public.delayedLoad($('img'));//延迟加载
+	
+});
+</script>
+</head>
+
+<body>
+	<!--head-->
+	<div class="headBg ">
+		<div class="headCenter clearfix center">
+			<ul class="left headL">
+				<li class="hl1">
+					<i class="left"></i>
+					<span class="left">收藏美团</span>
+				</li>
+				<li class="hl2">
+					<a href="javascript:;">登录</a>
+				</li>
+				<li class="hl3">
+					<a href="javascript:;">注册</a>
+				</li>
+				<li class="hl4">
+					<i class="left phone"></i>
+					<span class="left">手机美团</span>
+					<i class="left j"></i>
+				</li>
+			</ul>
+			
+			<ul class="right headR j-show-box">
+				<li class=" noborder">
+					<div class="contactBox">
+						我的订单
+					</div>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">我的美团</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">我的美团</a></li>
+						<li><a href="javascript:;">我的美团</a></li>
+						<li><a href="javascript:;">我的美团</a></li>
+						<li><a href="javascript:;">我的美团</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">最近浏览</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">最近浏览</a></li>
+						<li><a href="javascript:;">最近浏览</a></li>
+						<li><a href="javascript:;">最近浏览</a></li>
+						<li><a href="javascript:;">最近浏览</a></li>
+					</ul>
+				</li class="contact">
+				<li>
+					<div class="contactBox">
+						<i class="left baycar"></i>
+						<a href="javascript:;" class="left">购物车<span>0</span>件</a>
+						<i class="left j"></i>
+					</div>
+					
+				</li>
+				<li>
+					<div class="contactBox j-show-zIndex">
+						<a href="javascript:;" class="left">联系客服</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">联系客服</a></li>
+						<li><a href="javascript:;">联系客服</a></li>
+						<li><a href="javascript:;">联系客服</a></li>
+						<li><a href="javascript:;">联系客服</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">我是商家</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">我是商家</a></li>
+						<li><a href="javascript:;">我是商家</a></li>
+						<li><a href="javascript:;">我是商家</a></li>
+						<li><a href="javascript:;">我是商家</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">更多</a>
+						<i class="left j"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--banner-->
+	<div class="center headBanner ">
+		<a href="javascript:;" class="j-clicknone"></a>
+		<img _src="images/headBanner.jpg" alt="headBanner" style="height:60px;"/>
+	</div>
+	
+	<!--logo-->
+	<div class="center logoBox  clearfix ">
+		<h1>
+			<a href="javascript:;">美团</a>
+		</h1>
+		
+		<div class="city">
+			<strong>北京</strong>
+			<div>切换城市</div>
+		</div>
+		
+		<div class="left j-search">
+			<div class="search">
+				<div class="searchL">
+					<span>团购</span>
+					<i class="j left"></i>
+				</div>
+				<div class="searchC j-search-text">
+					<input type="text"   />
+					<span>输入商品</span>
+				</div>	
+			</div>
+			<div class="searchR j-search-btn">
+				<input type="submit" />
+				<span>搜索</span>
+			</div>
+		</div>
+		
+		<ul class="logoBoxR">
+			<li>
+				<i class="back"></i><p class="back">不满1意免单</p>
+			</li>
+			<li>
+				<i class="back"></i><p class="back">不2满单</p>
+			</li>
+			<li>
+				<i class="back"></i><p class="back">不满3意单</p>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<!--nav-->
+	<div class="center clearfix Martoptom ">
+		<div class="left navL">
+			<h4>全部商品</h4>
+			<ul class="navList j-show-box">
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop j-nav-top clearfix">
+						<ul>
+							<li class="tit">自1助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+						<ul>
+							<li class="tit">自2助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li class="j-nav-none contactW">
+					<h5>美食</h5>
+					<div class="self">
+ 					</div>
+					<div class="drop clearfix j-nav-top">
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自自助餐</p>
+						<p>自助助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li class="navHeight">
+					<h5>美食</h5>
+					<div class="self">
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="left navR">
+			<ul class="navTop clearfix">
+				<li><a href="javascript:;">首页</a></li>
+				<li><a href="list.html">首首页页</a></li>
+				<li><a href="list.html">首页</a></li>
+				<li><a href="list.html">首页首页</a></li>
+				<li><a href="list.html">首首页页</a></li>
+			</ul>
+			<div class="navCont clearfix">
+				<div class="navContL">
+					<div class="navCLList clearfix">
+						<i class="navPic"></i>
+						<h5>首首页页</h5>
+						<ul>
+							<li class="orange">首页页</li>
+							<li class="orange">首页页</li>
+							<li>首首页页</li>
+							<li>首页</li>
+							<li>首首页</li>
+							<li class="orange">首首页</li>
+							<li>首页页</li>
+						</ul>
+					</div>
+					<div class="navCLList">
+						<div class="clearfix">
+							<i class="navPic"></i>
+							<h5>首首页页</h5>
+							
+							<div class="navCLMore j-nav-more">
+								<a href="javascript;:" class="left">更多</a>
+								<i class="j"></i>
+							</div>
+							
+							<ul class="navCLMoR j-nav-moreUl">
+								<li class="orange">首页页</li>
+								<li class="orange">首页页</li>
+								<li>首首页页</li>
+								<li>首页</li>
+								<li>首首页</li>
+								<li class="orange">首首页</li>
+								<li>首页页</li>
+								<li>首页</li>
+								<li>首首页</li>
+								<li>首页</li>
+								<li>首首页</li>
+								<li class="orange">首首页</li>
+								<li>首页页</li>
+							</ul>
+							
+							
+						</div>
+					</div>
+					<div class="navCLList clearfix">
+						<i class="navPic"></i>
+						<h5>首首页页</h5>
+						<ul>
+							<li class="orange">首页页</li>
+							<li class="orange">首页页</li>
+							<li>首首页页</li>
+							<li>首页</li>
+							<li>首首页</li>
+							<li class="orange">首首页</li>
+							<li>首页页</li>
+							<li>首页</li>
+							<li>首页</li>
+						</ul>
+					</div>
+					
+					<div class="navBottom clearfix j-scrollR">
+						<ul class="clearfix j-scrollR-box">
+							<li>
+								<div class="navBottomL">
+									<img _src="images/nav_lp.jpg" alt="nav" style="height:232px;" />
+									<div class="navBoLCont clearfix">
+										<div class="navBoLCoL">
+											<a href="javascript:;">海塘海鲜自助火锅1</a>
+											<p>海塘海鲜午餐自助，提供免费WiFi</p>
+										</div>
+										<p class="navBoLCoR">￥198</p>
+									</div>
+								</div>
+								<div class="navBottomR">
+									<img _src="images/nav_rp.jpg" alt="nav" style="height:232px" />
+									<div class="navBoLCont clearfix">
+										<div class="navBoLCoL">
+											<a href="javascript:;">海塘海鲜自助火锅1</a>
+											<p>海塘海鲜午餐自助，提供免费WiFi</p>
+										</div>
+										<p class="navBoLCoR">￥198</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="navBottomL">
+									<img _src="images/nav_lp.jpg" alt="nav" style="height:232px" />
+									<div class="navBoLCont clearfix">
+										<div class="navBoLCoL">
+											<a href="javascript:;">海塘海鲜自助火锅2</a>
+											<p>海塘海鲜午餐自助，提供免费WiFi</p>
+										</div>
+										<p class="navBoLCoR">￥198</p>
+									</div>
+								</div>
+								<div class="navBottomR">
+									<img _src="images/nav_rp.jpg" alt="nav" style="height:232px" />
+									<div class="navBoLCont clearfix">
+										<div class="navBoLCoL">
+											<a href="javascript:;">海塘海鲜自助火锅2</a>
+											<p>海塘海鲜午餐自助，提供免费WiFi</p>
+										</div>
+										<p class="navBoLCoR">￥198</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="navBottomL">
+									<img _src="images/nav_lp.jpg" alt="nav" style="height:232px" />
+									<div class="navBoLCont clearfix">
+										<div class="navBoLCoL">
+											<a href="javascript:;">海塘海鲜自助火锅3</a>
+											<p>海塘海鲜午餐自助，提供免费WiFi</p>
+										</div>
+										<p class="navBoLCoR">￥198</p>
+									</div>
+								</div>
+								<div class="navBottomR">
+									<img _src="images/nav_rp.jpg" alt="nav" style="height:232px" />
+									<div class="navBoLCont clearfix">
+										<div class="navBoLCoL">
+											<a href="javascript:;">海塘海鲜自助火锅3</a>
+											<p>海塘海鲜午餐自助，提供免费WiFi</p>
+										</div>
+										<p class="navBoLCoR">￥198</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<a href="javascript:;" class="navLeft j-scrollR-l"></a>
+						<a href="javascript:;" class="navRight j-scrollR-r"><span>1/3</span></a>	
+					</div>
+				</div>
+				
+				<div class="navContR">
+					<a href="javascript:;" class="download"><img _src="images/download.png" alt="download" style="height:158px"/></a>
+					<div>
+						<a href="javascript:;" class="everyday">每日上新</a>
+						<a href="javascript:;" class="eat">吃喝玩乐最低价</a>
+						<img _src="images/nav_everyday.jpg" alt="everyday" style="height:213px"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--Shop-->
+	<div class="center Martop">
+		<div class="shopBox clearfix">
+			<a href="javascript:;" class="click"></a>
+			<h4>名店抢购</h4>
+			<div class="time clearfix j-countdown">
+				<i class="start"></i>
+				<span class="h1">0</span>
+				<span class="h2">0</span>
+				<i class="colon">:</i>
+				<span class="m1">1</span>
+				<span class="m2">1</span>
+				<i class="colon">:</i>
+				<span class="s1">2</span>
+				<span class="s2">3</span>
+			</div>
+		</div>
+		<div class="shopLbox j-scrollShop">
+			<ul class="shopList clearfix j-scrollR-box">
+				<li>
+					<a href="javascript:;" class="shopFood"><img _src="images/shopFood.jpg" alt="shopFood" width="100%" height="100%"/></a>
+					<a href="javascript:;" class="shopTit">【7店通用】松子日本料理</a>
+					<div class="shopCont clearfix">
+						<span class="shopPrice">￥95</span>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<p class="reduce">立即购买减￥5元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="shopFood"><img _src="images/shopFood.jpg" alt="shopFood" width="100%" height="100%"/></a>
+					<a href="javascript:;" class="shopTit">【7店通用】松子日本料理</a>
+					<div class="shopCont clearfix">
+						<span class="shopPrice">￥95</span>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<p class="reduce">立即购买减￥5元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="shopFood"><img _src="images/shopFood.jpg" alt="shopFood" width="100%" height="100%"/></a>
+					<a href="javascript:;" class="shopTit">【7店通用】松子日本料理</a>
+					<div class="shopCont clearfix">
+						<span class="shopPrice">￥95</span>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<p class="reduce">立即购买减￥5元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="shopFood"><img _src="images/shopFood.jpg" alt="shopFood" width="100%" height="100%"/></a>
+					<a href="javascript:;" class="shopTit">【7店通用】松子日本料理</a>
+					<div class="shopCont clearfix">
+						<span class="shopPrice">￥95</span>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<p class="reduce">立即购买减￥5元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="shopFood"><img _src="images/shopFood.jpg" alt="shopFood" width="100%" height="100%"/></a>
+					<a href="javascript:;" class="shopTit">【7店通用】松子日本料理</a>
+					<div class="shopCont clearfix">
+						<span class="shopPrice">￥95</span>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<p class="reduce">立即购买减￥5元</p>
+					</div>
+				</li>
+			</ul>
+			<a href="javascript:;" class="showLeft j-scrollR-l"></a>
+			<a href="javascript:;" class="showRight j-scrollR-r"><span>1/5</span></a>	
+		</div>
+	</div>
+	
+	
+	<!--Food-->
+	
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>名店抢购</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center ">
+			<ul class="barbecueBox clearfix j-navSide-top">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot center">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--entertainment-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>休闲娱乐</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Film-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>电影</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Hotel-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>酒店</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Life-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>生活</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Shop-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>购物</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Girl-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>丽人</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Plane-->
+	<div class="center Martop j-navSide-box">
+		<div class="foodBoxTop clearfix">
+			<a href="javascript:;" class="foodLogo"></a>
+			<h4>旅游</h4>
+			<ul class="foodLogoR">
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li>代金券</li>
+				<li class="foodall">全部
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="center">
+			<ul class="barbecueBox clearfix">
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+				<li class="noborBot">
+					<a href="javascript:;" class="barbecuePic"><img _src="images/barbecue.jpg" alt="barbecue" style="height:154px;"/></a>
+					<a href="javascript:;" class="barbecueTit">【7店通用】松子日本料理</a>
+					<a href="javascript:;" class="barbecueCont">提供免费WiFi</a>
+					<div class="barbeBuy clearfix">
+						<span class="barbePrice">￥95</span>
+						<p class="barbeP">门店价<span>￥98</span></p>
+						<span class="Sold">已售<i>123</i></span>
+					</div>
+					<div class="shopBottom">
+						<div class="starBox">
+							<div class="star">
+								<i></i>
+							</div>
+							<span class="Sold">123<i>评论</i></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="barbBoxBot">
+				<p class="moreClic">
+					更多美食团购，请点击查看
+					<i></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--footer-->
+		
+	<div class="center marginFoot j-tab">
+		<ul class="mtType clearfix j-tab-btn">
+			<li class="active"><a href="javascript:;">团购分类</a></li>
+			<li><a href="javascript:;">热门地标</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+		</ul>
+		
+		<div class="mtTypeCont j-tab-box">
+			<ul class="kind clearfix active">
+				<li>美食团购</li>
+				<li>电影团购</li>
+				<li>休闲娱乐团购</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>望京团购</li>
+				<li>中关村团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul><ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<!--line-->
+	<div class="line center marginFoot"></div>	
+	
+	<!--friLink-->
+	<div class="center clearfix">
+		<div class="friLink">
+			<dl>
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+			<dl>
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+			<dl>
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+			<dl class="user">
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+		</div>
+		<div class="friLiR">
+			<i></i>
+			<p class="friPhone">客服电话</p>
+			<p class="friPhoN">400-660-5335<span>(9:00-23:00)</span></p>
+			<p class="friBack">退款、退换货、查看美团券</p>
+			<a href="javascript:;" class="course">参考教程，轻松搞定!</a>
+		</div>
+	</div>
+	
+	<div class="friLiTop">
+		<p class="center ">©2015美团网团购 meituan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则</p>
+		<ul class="clearfix">
+			<li>
+				<a href="javascript:;" class="operate"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="Alipay"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="Tenpay"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="credible"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="consume"></a>
+			</li>
+		</ul>
+	</div>
+	
+	<!--position-->
+	<div>
+		<div class="newYear j-newYeBtn"></div>
+		<div class="fixedBottom">
+			<div class="newYearBg"></div>
+			<div class="newYearPic">
+				<img _src="images/newYearBan.png" alt="newYearBan"/>
+			</div>
+			<a href="javascript:;" class="newYeClose" ></a>
+		</div>
+	</div>
+	<!--toUp-->
+	<ul class="toUpBox">
+		<li><a href="javascript:;" class="toUp" id="j-toUp"></a></li>
+		<li><a href="javascript:;" class="nvestig"></a></li>
+		<li><a href="javascript:;" class="help"></a></li>
+		<li><a href="javascript:;" class="feedBack"></a></li>
+	</ul>
+	
+	<!--navSide-->
+	<ul class="navSide j-navSide">
+		<li>
+			<i class="navFood"></i>
+			<p>美食</p>	
+		</li>
+		<li>
+			<i class="navEnter"></i>
+			<p>休闲娱乐</p>	
+		</li>
+		<li>
+			<i class="navFilm"></i>
+			<p>电影</p>	
+		</li>
+		<li>
+			<i class="navHotel"></i>
+			<p>酒店</p>	
+		</li>
+		<li>
+			<i class="navLife"></i>
+			<p>生活服务</p>	
+		</li>
+		<li>
+			<i class="navShop"></i>
+			<p>购物</p>	
+		</li>
+		<li>
+			<i class="navGirl"></i>
+			<p>丽人</p>	
+		</li>
+		<li>
+			<i class="navPlane"></i>
+			<p>旅游</p>	
+		</li>
+	</ul>
+</body>
+</html>

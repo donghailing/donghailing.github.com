@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>食补屋商品频道</title>
+<link rel="stylesheet" href="css/basic.css">
+<link rel="stylesheet" href="css/food.css">
+<script>
+	window.onload=function(){
+		var oDiv2=document.getElementById('div2');
+		var aImg=oDiv2.getElementsByTagName('img');
+		var oDiv3=document.getElementById('div3');
+		var aA=oDiv3.getElementsByTagName('a');
+		var iNow=0;
+		var timer;
+		for(var i=0; i<aA.length; i++){
+			aA[i].index=i;
+			aA[i].onmouseover=function(){
+				iNow=this.index;
+				for(var i=0; i<aA.length; i++){
+					aA[i].className='';
+					aImg[i].className='';	
+				}
+				this.className='active';
+				aImg[this.index].className='active';
+			};	
+		}
+		timer=setInterval(next,3000);
+		function next(){
+			if(iNow<aA.length-1){
+				iNow++;	
+			}else{
+				iNow=0;	
+			}
+			for(var i=0; i<aA.length; i++){
+				aA[i].className='';
+				aImg[i].className='';	
+			}
+			aA[iNow].className='active';
+			aImg[iNow].className='active';
+		}
+		oDiv2.onmouseover=function(){
+			clearInterval(timer);	
+		};
+		oDiv2.onmouseout=function(){
+			timer=setInterval(next,3000);	
+		};	
+	};
+</script>
+</head>
+
+<body>
+<!----------------------------顶部通栏广告----------------------------------------->
+<div class="top_banner"></div>
+<!----------------------------注册登录----------------------------------------->
+<div class="header_bar">
+    <div class="login_M">
+        <p class="welcome">您好! 欢迎来到食补屋!</p>
+        <div class="login_list fl">
+            <a href="#">请登录</a><a href="#">免注册</a>
+        </div>
+        <div class="login_list fr">
+            <a href="#">我的食补屋</a><a href="#">我的收藏</a>
+        </div>
+    </div>
+</div>
+<!----------------------------LOGO及搜索框----------------------------------------->
+<div class="logo_bar">
+    <div class="logo_M">
+        <a class="logo" href="#"><img src="images/logo.png" /></a>
+        <ul class="icon_list">
+        	<li>
+            	<img src="images/icon_01.png" />
+                <a href="#">专业养生</a>
+            </li>
+            <li>
+            	<img src="images/icon_02.png" />
+                <a href="#">商家认证</a>
+            </li>
+            <li>
+            	<img src="images/icon_03.png" />
+                <a href="#">消费者保障</a>
+            </li>
+            <li>
+            	<img src="images/icon_04.png" />
+                <a href="#">快速发货</a>
+            </li>
+        </ul>
+        <div class="search_box">
+        	<div class="search_show">
+            	<div class="search">
+                	<input type="text" class="search_inp" />
+                    <span class="inp">野生山参</span>
+                </div>
+                <input type="button" class="search_btn" value="搜索" />
+            </div>
+            <div class="search_list">
+            	<a href="#">女性滋补</a><a href="#">男性滋补</a><a href="#">补肾食品</a><a href="#">健脾食品</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------头部导航---------------------------------------------->
+<ul class="header_M">
+	<li><a href="#" class="active">女性滋补首页</a></li>
+    <li><a href="#">新品</a></li>
+</ul>
+<!----------------------------轮播图和导航----------------------------------------->
+<div class="focus_bar">
+	<div class="focus_M">
+    	<div class="fl_bar">
+			<ul class="fl_bar_list mt_10">
+				<li><a href="#">美容养颜食品</a></li>
+				<li><a href="#">瘦身食品</a></li>
+				<li><a href="#">补血瘦身食品</a></li>
+				<li><a href="#">瘦身食品</a></li>
+				<li><a href="#">滋阴补肾食品</a></li>
+				<li><a href="#">排毒食品</a></li>
+			</ul>
+			<h3 class="fl_bar_title">女性热门食品</h3>
+			<ul class="fl_bar_list">
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+				
+				<li><a href="#">大枣</a></li>
+				<li><a href="#">红糖</a></li>
+				<li><a href="#">阿胶</a></li>
+				<li><a href="#">蜂蜜</a></li>
+				<li><a href="#">红糖</a></li>
+			</ul>
+        </div>
+		<!---------------------------轮播图---------------------------------->
+		<div class="js_focus" id="div2">
+			<a href="#"><img src="images/js_banner01.png" class="active" /></a>
+			<a href="#"><img src="images/js_banner02.png" /></a>
+			<a href="#"><img src="images/js_banner03.png" /></a>
+			<div class="js_focus_list" id="div3">
+				<a href="#" class="active">1</a><a href="#">2</a><a href="#">3</a>
+			</div>
+		</div>
+    </div>
+</div>
+<!---------------------------产品列表标题---------------------------------->
+<div class="food_title">女性热门滋补食品</div>
+<div class="food_M">
+	<a class="food_big" href="#"></a>
+	<a class="food_m" href="#"></a>
+	<div class="food_sm_list">
+		<ul>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+	</div>
+</div>
+<!---------------------------产品列表标题---------------------------------->
+<div class="food_title">女性美容养颜滋补食品</div>
+<!----------------------------产品列表----------------------------------------->
+<div class="product_list">
+	<ul>
+    	<li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+        <li>
+        	<a href="#"><img src="images/product.jpg" /></a>
+            <h3 class="price">¥188.00<span>元/500g</span></h3>
+            <p class="product_title">东北人参 长白山野生人参 20年林下参</p>
+            <p class="product_p">人参的功效是大补元气，固脱生津，安神。治劳伤虚损，食少，倦怠，反胃吐食，大便滑-泄，虚咳喘促，自汗暴脱，惊悸，健忘，眩晕头痛，阳-痿，尿频，消渴，妇女崩漏，小儿慢惊，及久虚不复，一</p>
+        </li>
+    </ul>
+</div>
+<!----------------------------页码----------------------------------------->
+<div class="page_M">
+	<ul class="page_list">
+    	<li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+</div>
+<!----------------------------底部信息----------------------------------------->
+<div class="foot">
+	<ul class="foot_nav">
+		<li>
+			<dl>
+				<dt><a href="#">购物指南</a></dt>
+					<dd><a href="#">免费注册</a></dd>
+					<dd><a href="#">购物流程</a></dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt><a href="#">支付方式</a></dt>
+					<dd><a href="#">支付宝快捷支付</a></dd>
+					<dd><a href="#">网银支付</a></dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt><a href="#">配送方式</a></dt>
+					<dd><a href="#">包邮政策</a></dd>
+					<dd><a href="#">配送说明</a></dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt><a href="#">售后服务</a></dt>
+					<dd><a href="#">正品承诺</a></dd>
+					<dd><a href="#">售后咨询</a></dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt><a href="#">服务保障</a></dt>
+					<dd><a href="#">在线客服</a></dd>
+					<dd><a href="#">品质保证</a></dd>
+					<dd><a href="#">邮箱466315058@qq.com</a></dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt><a href="#">手机食补屋</a></dt>
+					<dd class="ewm"><img src="images/ewm.png" /></dd>
+			</dl>
+		</li>
+	</ul>
+</div>
+<div class="link">
+	<div class="link_M">
+		<a href="#">关于食补屋</a><a href="#">商家入驻</a><a href="#">商务合作</a><a href="#">品牌合作专区</a><a href="#">联系我们</a>
+	</div>
+</div>
+<p class="link_p">Copyright © 2010-2014 北食补屋电子商务有限公司  shibuwu.com   客服热线：13756150338</p>
+<p class="link_p"><a href="#">京公网安备 1101010200122324121</a> | <a href="#">京ICP证11103312号</a> | <a href="#">食品流通许可证 SP1101051110165515（1-1）</a> | <a href="#">营业执照</a></p>
+</body>
+</html>

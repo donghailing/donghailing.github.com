@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+/*---------------------------健康常识------------------------------------*/
+.health_know{ width:1190px; height:32px; line-height:32px; border-bottom:1px solid #c4c4c4; margin:0 auto; margin-bottom:10px; overflow:hidden;}
+.health_know_title{ float:left; display:inline; font-size:18px; color:#000; padding-right:10px; font-weight:normal; }
+.health_know_p{ float:left; display:inline; color:#474747; line-height:36px;}
+
+/*---------------------------健康常识图标列表------------------------------------*/
+.health_M{ width:1190px; margin:0 auto; margin-bottom:25px;}
+.health_M ul{ overflow:hidden; zoom:1; margin-right:-10px;}
+.health_M ul li{ float:left; display:inline; width:390px; margin-right:10px; margin-bottom:10px; overflow:hidden;}
+.health_M ul li img{ height:140px; margin-bottom:10px;}
+.health_M ul li a{ display:block; text-align:center; color:#474747;}
+.health_M ul li a:hover{ text-decoration:underline;}
+
+/*---------------------------产品展示------------------------------------*/
+.product_M{ width:1190px; height:390px; margin:0 auto; margin-bottom:10px; overflow:hidden;}
+.product_M_fl{ float:left; display:inline; width:176px; height:390px; margin-right:1px; overflow:hidden;}
+.product_icon_a{ height:90px; background:url(../images/product_icon01.png) no-repeat; text-align:center; color:#fff; line-height:140px; overflow:hidden;}
+.product_icon_b{ height:90px; background:url(../images/product_icon02.png) no-repeat; text-align:center; color:#fff; line-height:140px; overflow:hidden;}
+.product_icon_c{ height:90px; background:url(../images/product_icon03.png) no-repeat; text-align:center; color:#fff; line-height:140px; overflow:hidden;}
+.product_icon_d{ height:90px; background:url(../images/product_icon04.png) no-repeat; text-align:center; color:#fff; line-height:140px; overflow:hidden;}
+.product_icon_e{ height:90px; background:url(../images/product_icon05.png) no-repeat; text-align:center; color:#fff; line-height:140px; overflow:hidden;}
+.product_banner{ position:relative; height:300px; overflow:hidden;}
+.product_banner img{ width:176px; height:300px; overflow:hidden;}
+.product_list{ position:absolute; top:10px; left:36px; width:140px; overflow:hidden;}
+.product_list a{ display:inline-block; margin-right:10px; color:#333; line-height:30px;}
+.product_list a:hover{ text-decoration:underline;}
+.product_big{ float:left; display:inline; width:413px; height:390px; overflow:hidden; background:#f4ce1d;}
+.product_M_fr{ float:left; display:inline; width:600px; height:390px; overflow:hidden;}
+.product_up{ height:225px; overflow:hidden;}
+.product_up li{ float:left; display:inline; width:200px; height:225px; background:#fce1b0;}
+.product_down{ height:165px; overflow:hidden;}
+.product_down li{ float:left; display:inline; width:200px; height:165px; background:#fce1b0;}
+.product_up li.color01{ background:#f4781d;}
+.product_down li.color02{ background:#f4a51d;}
+.product_down li.color03{ background:#f4ce1d;}

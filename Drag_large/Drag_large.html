@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拖拽变大</title>
+<style>
+* { margin:0; padding:0; }
+body{ overflow:hidden; height:100%;}
+.box { position:relative; width:900px; height:600px; margin:20px auto; border:1px solid red; }
+.test { position:absolute; left:50%; top:-40px; height:1000px; border-left:1px solid red; z-index:1000; }
+ul { position:absolute; top:50%; margin-top:-150px; left:0; height:300px; }
+li { position:relative; float:left; width:400px; height:300px; list-style:none; }
+
+img { width:400px; height:300px; }
+</style>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('div1');
+	var oUl=document.getElementById('ul1');
+	var aLi=oUl.children;
+	
+	var aImg=oUl.getElementsByTagName('img');
+	
+	var iCenter=oDiv.offsetWidth/2;
+	var w=aLi[0].offsetWidth;
+	oUl.style.width=w*aLi.length+'px';
+	// var maxLeft=iCenter-w/2;
+	var maxLeft=iCenter-(1-0.5)*w;
+	var minLeft=iCenter-(aLi.length-0.5)*w;
+	
+	var maxWidth=800;
+	var maxHeight=600;
+	var minWidth=400;
+	var minHeight=300;
+	
+	oUl.style.left=iCenter-(4-0.5)*w+'px';
+	setSize();
+	
+	// 拖拽
+	oUl.onmousedown=function (ev){
+		var oEvent=ev || event;
+		var disX=oEvent.clientX-oUl.offsetLeft;
+		
+		document.onmousemove=function (ev){
+			var oEvent=ev || event;
+			var left=oEvent.clientX-disX;
+			
+			if (left > maxLeft)
+			{
+				left=maxLeft;
+			}
+			else if (left < minLeft)
+			{
+				left=minLeft;
+			}
+			
+			oUl.style.left=left+'px';
+			
+			setSize();
+		};
+		
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+		
+		return false;
+	};
+	
+	function setSize()
+	{
+		for (var i=0; i<aLi.length; i++)
+		{
+			// 每个li距离div中心点的距离
+			var dis=Math.abs(aLi[i].offsetWidth/2+aLi[i].offsetLeft+oUl.offsetLeft-iCenter);
+			
+			// 算比例
+			var scale=1-dis/500;
+			scale.toFixed(2);
+			(scale<0.5) && (scale=0.5);
+			
+			
+			
+			// 动态改变图片的宽高
+			aImg[i].style.width=maxWidth*scale+'px';
+			aImg[i].style.height=maxHeight*scale+'px';
+			
+			// margin拽回来
+			var marginTop=(minHeight-aImg[i].offsetHeight)/2;
+			aImg[i].style.marginTop=marginTop+'px';
+			
+			var marginleft=(minWidth-aImg[i].offsetWidth)/2;
+			aImg[i].style.marginLeft=marginleft+'px';
+			
+			aLi[i].style.zIndex=scale*100;
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+	<div class="box" id="div1">
+		<div class="test"></div>
+		<ul id="ul1">
+			<li><img src="images/1.jpg" /></li>
+			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/3.jpg" /></li>
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/5.jpg" /></li>
+			<li><img src="images/6.jpg" /></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

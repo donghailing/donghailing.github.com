@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{ font-size:20px;}
+body{ width:16rem; }
+.clearfix:after{ display:block; content:""; clear:both;}
+.wrap{ width:16rem; margin:0 auto;}
+
+/*header*/
+header{ width:16rem; margin:0 auto; height:2.225rem; background:#262626; display:-webkit-box; -webkit-box-align:center;}
+.menu{ width:1.45rem; height:1.2rem; margin-left:0.4rem; background:url(../images/menu_bg.png) no-repeat; background-size:100%; }
+h1{ -webkit-box-flex:1; text-align:center; font-size:1.2rem; color:#fff;}
+.pcBg{ width:1.45rem; height:1.15rem; margin-right:0.4rem; background:url(../images/pc_bg.png) no-repeat; background-size:100%; }
+.line{ display:block; width:16rem; height:0; border-bottom:0.1rem solid #49caac; margin:0 auto;} 
+
+/*section*/
+section{ width:16rem; margin:0 auto;}
+.userBox{ width:16rem; height:2.1rem; margin:0 auto; background:#fafafa; display:-webkit-box; -webkit-box-align:center;}
+.userBox>div{ -webkit-box-flex:1; height:100%; display:-webkit-box; -webkit-box-align:center;}
+.userBox>span{ display:block; width:0; height:1.45rem; border-left:0.1rem solid #e6e6e6; }
+.uesrLogin div,.uesrRegister div{ margin-left:1.4rem; margin-right:0.55rem; width:1.45rem; height:1.45rem; background:url(../images/user_login.png) no-repeat right center; background-size:100%;}
+.uesrRegister div{ background:url(../images/user_register.png) no-repeat; background-size:100%;}
+.userBox p{ font-size:0.7rem; height:1.45rem; line-height:1.45rem;}
+
+/*adBox*/
+.adBox{ width:16rem; margin:0 auto;height:6.65rem; overflow:hidden;}
+.adList{ width:90rem;}
+.adList li{ position:relative; float:left; width:16rem; height:6.65rem; }
+.adList li img{ width:16rem; height:6.65rem;}
+.adList li p{ position:absolute; left:0; bottom:0; width:100%; height:1.75rem; line-height:1.75rem; text-align:center; font-size:0.7rem; color:#fff; font-family:'宋体'; background:rgba(0,0,0,0.5);}
+/*news*/
+.news{ width:16rem; margin:0 auto;}
+.newsList{ width:15.2rem; margin:0 auto;}
+.newsList li{ padding:0 0.35rem; font-size:0.75rem; line-height:0.75rem; border-bottom:0.05rem solid #ebebeb;}
+.newsList li>a{ display:block; width:100%; padding:0.625rem 0;}
+.newsList li:last-child{ border-bottom:none;}
+.details{ width:100%; padding-bottom:0.8rem; overflow:hidden;}
+.details img{ width:5.2rem; height:3.7rem; float:left;}
+.details p{ margin-left:5.2rem; height:3.75rem; overflow:hidden; line-height:1.25rem; margin-top:-0.15rem; padding-left:0.7rem; padding-right:0.35rem; font-size:0.65rem; color:#8a8a8a;}
+
+/*rot*/
+.rot{ width:16rem; margin:0 auto;}
+.rotTitile{ width:16rem; margin:0 auto; height:2rem; background:#fafafa; border-bottom:0.05rem solid #ebebeb;  display:-webkit-box; -webkit-box-align:center;}
+.rotTitile h2{ font-size:0.75rem; margin-left:0.75rem;}
+.rotTitile .empty{ display:block; -webkit-box-flex:1; height:100%;}
+.rotTitile span{ display:block; width:1.475rem; height:1.475rem; background:url(../images/titleMenu.png) no-repeat; background-size:100%; margin-right:0.75rem;}
+
+.rotNav{ width:16rem; margin:0 auto; }
+.rotNavBox{ width:100%; margin:0 auto; height:2.05rem; border-bottom:0.05rem solid #ebebeb;}
+.rotNavBox li{ float:left; width:3.1rem; height:2.05rem; text-align:center; line-height:2.05rem; font-size:0.75rem;}
+.rotNavBox li.borderRed{border-bottom:0.1em solid #d43553; height:2rem;}
+
+/*toUp*/
+.toUp{width:16rem; height:3rem; margin:0 auto; background:#fafafa; display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;  border-top:0.05rem solid #ebebeb;}
+.toUpC{}
+.toUpC span{ width:1.45rem; height:1.45rem; background:url(../images/to_up.png) no-repeat; background-size:100%; float:left;}
+.toUpC p{ margin-left:1.45rem; padding-left:0.5rem; padding-top:0.2rem; color:#84888b;}
+
+/*footer*/
+footer{ height:3.75rem; width:16rem; background:#262626; margin:0 auto; display:-webkit-box; -webkit-box-align:center;}
+footer>div{ -webkit-box-flex:1; display:-webkit-box; -webkit-box-pack:center;}
+footer span{display:block; height:1.9rem; width:0; border-left:0.1rem solid #e6e6e6; }
+.footerPcBg{width:1.45rem; height:1.15rem; margin-left:0.4rem; margin-right:0.6rem; background:url(../images/pc_bg.png) no-repeat; background-size:100%; }
+.ipone{ width:0.65rem; height:1.15rem; margin-right:0.6rem; background:url(../images/iphone.png) no-repeat; background-size:100%;}
+footer>div p{ font-size:0.7rem; color:#c1c1c1; padding-top:0.15rem;}

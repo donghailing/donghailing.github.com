@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>自定义滚动条</title>
+<style>
+* { margin:0; padding:0; }
+.box { overflow:hidden; width:500px; height:380px; margin:50px auto; }
+.left-bar { position: relative;; float:left; width:440px; height:100%; background:#eee;/**/  }
+.content { position: absolute; top:0; left: 0; width: 100%; }
+.right-bar { position:relative; float:right; width:35px; height:100%; background:#eee; }
+.right-bar a { position:absolute; left:0; width:100%; height:35px; line-height:35px; text-align:center; text-decoration:none; background:green; color:#fff; font-size:20px; font-weight:bold; }
+#up { top:0; }
+#down { bottom:0; }
+.scroll-box { position:relative; margin-top:35px; height:310px; }
+.item { position:absolute; top:0; left:0; width:100%; height:50px;/**/ background:red; }
+</style>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('warp');
+	var oSpan=document.getElementById('span1');
+	var oCont=document.getElementById('content');
+	var oContH=oCont.offsetHeight-oCont.parentNode.offsetHeight;
+	
+	var oUp=document.getElementById('up');
+	var oDown=document.getElementById('down');
+	var timer=null;
+	//计算span高度,最小高60
+	var oSpanH=oSpan.parentNode.offsetHeight*oCont.parentNode.offsetHeight/oCont.offsetHeight;
+	(oSpanH<60)&&(oSpanH=60);
+	
+	//拖拽
+	var maxSpanH=oSpan.parentNode.offsetHeight-oSpan.offsetHeight;
+	var spanTop=0;
+	oSpan.onmousedown=function (ev){
+		var oEvent=ev || event;
+		var oldY=oEvent.clientY;
+		var oldT=oSpan.offsetTop;
+		document.onmousemove=function (ev){
+			var oEvent=ev || event;
+			spanTop=oEvent.clientY-oldY+oldT;
+			show();
+		};
+		
+		
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+			oSpan.releaseCapture &&oSpan.releaseCapture(); 
+		};
+		oSpan.setCapture &&oSpan.setCapture();  
+		return false;
+	};
+	//上下
+	oUp.onmousedown=function (){
+		timer=setInterval(function (){
+			spanTop-=5;
+			show();
+		},30);
+	};
+	
+	oDown.onmousedown=function (){
+		timer=setInterval(function (){
+			spanTop+=5;
+			show();
+		},30);
+	};
+	
+	oUp.onmouseup=oDown.onmouseup=function (){
+		clearInterval(timer);
+	};
+	
+	
+	//滚轮
+	
+	
+	
+	function show()
+	{
+		if(spanTop<0)
+			{
+				spanTop=0;
+			}
+			else if(spanTop>maxSpanH)
+			{
+				spanTop=maxSpanH;	
+			}
+			oSpan.style.top=spanTop+'px';
+			
+			//内容
+			var n=spanTop/maxSpanH;
+			oCont.style.top=-Math.floor(n*oContH)+'px';
+	}
+	
+	addWheel(oBox,function (down){
+		if(down)
+		{
+			spanTop+=5;
+			show();
+		}
+		else
+		{
+			spanTop-=5;
+			show();
+		}
+		
+	});
+	function addWheel(obj,fn)
+	{
+		if(window.navigator.userAgent.toLowerCase().indexOf('firefox') != -1)
+		{
+			obj.addEventListener('DOMMouseScroll',function (ev){
+				var oEvent=ev||event;
+				
+				var down=oEvent.detail>0 ? true : false;
+				fn(down);
+			},false);
+		}
+		else
+		{
+			obj.onmousewheel=function (ev){
+				var oEvent=ev||event;
+				var down=oEvent.wheelDelta>0 ? false : true;
+				fn(down);
+			};
+		}
+		
+	}
+};
+</script>
+</head>
+
+<body>
+	<div class="box"  id="warp">
+		<div class="left-bar">
+			<div class="content" id="content">
+				
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　十八届五中全会通过的《中共中央关于制定国民经济和社会发展第十三个五年规划的建议》(以下简称&ldquo;《建议》&rdquo;)提及，&ldquo;实施网络强国战略，加快构建高速、移动、安全、泛在的新一代信息基础设施。&rdquo;</p>
+				<p>　2015年12月16日到18日，第二届世界互联网大会将在浙江乌镇举行，中共中央总书记、国家主席习近平将出席本届世界互联网大会，并在开幕式上发表主旨演讲。</p>
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　十八届五中全会通过的《中共中央关于制定国民经济和社会发展第十三个五年规划的建议》(以下简称&ldquo;《建议》&rdquo;)提及，&ldquo;实施网络强国战略，加快构建高速、移动、安全、泛在的新一代信息基础设施。&rdquo;</p>
+				<p>　2015年12月16日到18日，第二届世界互联网大会将在浙江乌镇举行，中共中央总书记、国家主席习近平将出席本届世界互联网大会，并在开幕式上发表主旨演讲。</p>
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　十八届五中全会通过的《中共中央关于制定国民经济和社会发展第十三个五年规划的建议》(以下简称&ldquo;《建议》&rdquo;)提及，&ldquo;实施网络强国战略，加快构建高速、移动、安全、泛在的新一代信息基础设施。&rdquo;</p>
+				<p>　2015年12月16日到18日，第二届世界互联网大会将在浙江乌镇举行，中共中央总书记、国家主席习近平将出席本届世界互联网大会，并在开幕式上发表主旨演讲。</p>
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　十八届五中全会通过的《中共中央关于制定国民经济和社会发展第十三个五年规划的建议》(以下简称&ldquo;《建议》&rdquo;)提及，&ldquo;实施网络强国战略，加快构建高速、移动、安全、泛在的新一代信息基础设施。&rdquo;</p>
+				<p>　2015年12月16日到18日，第二届世界互联网大会将在浙江乌镇举行，中共中央总书记、国家主席习近平将出席本届世界互联网大会，并在开幕式上发表主旨演讲。</p>
+				<p>　　习近平于2014年2月主持召开中央网络安全和信息化领导小组第一次会议时，首次提出建设网络强国的战略，而今这一战略又将成为<a href="http://country.huanqiu.com/china" target="_blank" title="中国">中国</a>&ldquo;十三五&rdquo;期间全面建成小康社会的重要抓手。</p>
+				<p>　　十八届五中全会通过的《中共中央关于制定国民经济和社会发展第十三个五年规划的建议》(以下简称&ldquo;《建议》&rdquo;)提及，&ldquo;实施网络强国战略，加快构建高速、移动、安全、泛在的新一代信息基础设施。&rdquo;</p>
+			</div>
+		</div>
+		
+		<div class="right-bar">
+			<a href="javascript:;" id="up">↑</a>
+			<a href="javascript:;" id="down">↓</a>
+			<div class="scroll-box">
+				<span class="item" id="span1"></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* 现在的位置 */
+.web_site{ width:1190px; height:34px; line-height:34px; border-bottom:1px solid #000; color:#000; margin:0 auto; margin-bottom:10px;}
+.web_site a{ color:#000;}
+.web_site a:hover{ text-decoration:underline;}
+.web_site a.color_red{ color:#c30d23;}
+
+/* 产品列表 */
+.product_list{ width:1190px; margin:0 auto;}
+.product_list ul { overflow:hidden; zoom:1; margin-right:-10px; }
+.product_list ul li{ float:left; display:inline; width:270px; padding:10px; padding-bottom:15px; margin-right:10px; margin-bottom:10px; background:#fff; overflow:hidden;}
+.product_list ul li img{ width:270px; height:270px; margin-bottom:10px;}
+.price{ height:30px; font-size:24px; color:#e51c1c;}
+.price span{ font-size:12px; color:#545454; font-weight:normal;}
+.product_title{ height:20px; color:#000; overflow:hidden;}
+.product_p{ line-height:18px; color:#a6a6a6;}
+
+/* 页码 */
+.page_M{ width:1190px; padding-bottom:50px; margin:0 auto; overflow:hidden; }
+.page_list{ float:right; display:inline; height:30px; overflow:hidden;}
+.page_list li{ float:left; display:inline; height:30px; line-height:30px; margin-right:10px;}
+.page_list li a{ display:inline-block; padding:0 15px; background:#e2e2e2; color:#545454;}
+.page_list li a:hover{ background:#bcbcbc;}
+.page_list li a.active{ background:#bcbcbc;}

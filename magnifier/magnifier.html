@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>放大镜</title>
+<style>
+
+* { margin:0; padding:0; }
+html,body{ width:100%; height:100%;}
+div { overflow:hidden; position:absolute; top:50px; width:310px; height:310px; }
+#div1 { left:50px; background:url(images/m1.jpg) no-repeat; }
+span { display:none; position:absolute; top:0; left:0; width:100px; height:100px; background:yellow; opacity:0.3; }
+#div2 { display:none; left:380px; }
+img { position:absolute; top:0; left:0; width:900px; height:900px; }
+</style>
+<script src="../js/jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	var oSpan=$('span');
+	var oDiv1=$('#div1');
+	var oDiv2=$('#div2');
+	var oImg=$('#img1');
+	var nMaxLeft=oDiv1.width()-oSpan.width();
+	var nMaxTop=oDiv1.height()-oSpan.height();
+	var nMaxImgLeft=oImg.width()-oDiv2.width();
+	var nMaxImgTop=oImg.height()-oDiv2.height();
+	
+	oDiv1.hover(function (){
+		oSpan.show();
+		oDiv2.show();
+	}, function (){
+		oSpan.hide();
+		oDiv2.hide();
+	});	
+	
+	oDiv1.mousemove(function (ev){
+		var left=ev.clientX-oDiv1.offset().left-oSpan.width()/2;
+		var top=ev.clientY-oDiv1.offset().top-oSpan.height()/2;
+		
+		if (top < 0)
+		{
+			top=0;
+		}
+		else if (top > nMaxTop)
+		{
+			top=nMaxTop;
+		}
+		
+		if (left < 0)
+		{
+			left=0;
+		}
+		else if (left > nMaxLeft)
+		{
+			left=nMaxLeft;
+		}
+		
+		oSpan.css({
+			left:left+'px',
+			top:top+'px'
+		});
+		
+		// 算比例
+		
+		oImg.css({
+			left:-(left/nMaxLeft*nMaxImgLeft)+'px',
+			top:-(top/nMaxTop*nMaxImgTop)+'px'
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+	<div id="div1">
+		<span id="span1"></span>
+	</div>
+	
+	<div id="div2">
+		<img src="images/b1.jpg" id="img1" />
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

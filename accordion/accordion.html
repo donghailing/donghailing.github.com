@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>手风琴</title>
+<style>
+* { margin:0; padding:0; }
+ul { overflow:hidden; position:relative; width:920px; height:305px; border:1px solid red; margin:50px auto; }
+li { position:absolute; top:0; left:0; width:840px; padding-left:20px; list-style:none; }
+span { position:absolute; top:0; left:0; width:20px; height:205px; padding-top:100px; }
+img { width:840ppx; height:305px; }
+</style>
+<script src="../js/jquery-1.7.2.js"></script>
+<script src="move.js"></script>
+<script>
+$(function (){
+	var aSpan=$('ul span');
+	var aLi=$('ul li');
+	var aLiW=aLi.eq(0).innerWidth();
+	var aSpanW=aSpan.eq(0).innerWidth();
+	//默认
+	aLi.each(function (index){
+		if(index>0)
+		{
+			aLi.eq(index).css('left',aLiW+aSpanW*(index-1));
+		}
+	});
+	
+	//加事件
+	aLi.each(function (index){
+		(function (i){
+			aLi.eq(index).mouseenter(function (){
+				aLi.each(function (j){
+					if(j<=i)
+					{
+						//aLi.eq(j).css('left',aSpanW*j);
+						move(aLi[j],{'left':aSpanW*j});
+					}
+					else
+					{
+						//aLi.eq(j).css('left',aLiW+aSpanW*(j-1));
+						move(aLi[j],{'left':aLiW+aSpanW*(j-1)});
+					}
+				});
+			});
+		})(index);
+	});
+});
+</script>
+</head>
+
+<body>
+	<ul>
+		<li>
+			<span style="background:yellow;">第一项</span>
+			<img src="images/0.jpg" />
+		</li>
+		<li>
+			<span style="background:#F60;">第二项</span>
+			<img src="images/1.jpg" />
+		</li>
+		<li>
+			<span style="background:#0F0;">第三项</span>
+			<img src="images/2.jpg" />
+		</li>
+		<li>
+			<span style="background:#F3F;">第四项</span>
+			<img src="images/3.jpg" />
+		</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

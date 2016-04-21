@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{ font-size:20px;}
+body{width:16rem;}
+.clearfix:after{ display:block; content:""; clear:both;}
+.wrap{ width:16rem; margin:0 auto; position:relative;}
+/*header*/
+header{  background:-webkit-linear-gradient(#fff,#ebebeb); background-size:100%; height:2.5rem; display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;}
+header a{ position:absolute; width:3.175rem; height:1.55rem; background:url(../images/back.png) no-repeat; background-size:100%; margin-left:0.55rem;  margin-top:0.5rem;}
+header h1{ width:3.7rem; height:0.975rem; background:url(../images/title.png) no-repeat; background-size:100%;}
+/*section*/
+section{ margin:0 auto;}
+.banner{ position:relative; width:100%; overflow:hidden;}
+.banner_pic{ width:112rem; height:6.65rem; transform:translateX(-16rem);}
+.banner_pic li{ float:left; width:16rem; height:100%;}
+.banner_pic li img{ width:100%; height:100%;}
+
+.banner>div{ width:100%; position:relative; height:0.25rem; padding:0.5rem 0;}
+.buttonBox{ position:absolute; left:50%; top:50%; margin-left:-1.25rem; margin-top:-0.125rem; width:2.5rem; height:0.25rem;}
+.buttonBox li{ width:0.25rem; height:0.25rem; float:left; margin:0.125rem; border-radius:50%; background:#a9a9a9;}
+.buttonBox li.curBtn{ background:#ff4300}
+
+/*icoBox*/
+.icoBox{width:16rem; margin:0.5rem auto 0;}
+.icoBox ul{ width:15.2rem; margin:0 auto; padding-bottom:0.6rem;}
+.icoBox ul li{ float:left; width:2rem; margin:0 0.9rem; padding-bottom:1rem;}
+.commodity{ display:block; width:100%; height:2rem; margin-bottom:0.45rem; background:url(../images/commodity.png) no-repeat; background-size:100%;}
+.commodityTit{ width:100%; font-size:0.6rem; text-align:center; line-height:0.6rem; color:#999;}
+
+/*rotBox*/
+.rotBox{ width:16rem; margin:0 auto;}
+.rotTop{ width:15rem; height:1.275rem; line-height:1.275rem;  padding-bottom:0.525rem; margin:0 auto 0.775rem; border-bottom:0.1rem solid #dcdcdc;  }
+.rotTopL{ float:left; height:0.75rem; padding-left:0.45rem; border-left:0.1rem solid #d51938; font-size:0.7rem; line-height:0.75rem;font-weight:bold;}
+.rotTopR{ float:right; height:0.75rem; padding-right:1.25rem; font-size:0.7rem; line-height:0.75rem; font-weight:bold;}
+
+.rotList{width:15rem; margin:0 auto;}
+.rotList li{ width:100%; height:3rem; margin-bottom:0.5rem; overflow:hidden;}
+.rotList li .numb{ float:left; width:1.5rem; height:100%; text-align:center; line-height:3rem; background:#e00202; font-size:1.2rem; font-weight:bold; color:#fff;}
+.rotList li img{ float:left; width:4.5rem; height:100%;}
+.rotCont{ float:left; width:9rem; height:100%; background:#f4f4f4; }
+.rotContL{ float:left; color:#999; font-size:0.6rem; font-weight:bold; margin-left:0.55rem; height:3rem; font-family:'Microsoft YaHei';}
+.rotContT{ padding:0.7rem 0 0.3rem 0;}
+.discount span{color:#c7223d; }
+.discount i{ text-decoration:line-through; font-family:'Microsoft YaHei';}
+.rotContR{ float:right; font-size:0.8rem;  margin-right:0.7rem; }
+/*.rotContR div{ float:right;}*/
+.rotContR i{ line-height:3rem; height:3rem; color:#d51938; font-family:'Microsoft YaHei'; font-weight:bold;}
+.rotContR span{ margin-left:0.35rem; float:right; width:0.325rem; height:3rem; background:url(../images/arrow.png) no-repeat center center; background-size:100%;}
+
+.rotMore{ display:block;width:15rem; height:2rem; background:#f5f5f5; font-size:0.7rem; text-align:center; line-height:2rem; margin:0.5rem auto 0; font-weight:bold; color:#666;}
+
+/*goods*/
+.goodsList{ width:15rem; margin:0.5rem auto 0; }
+.goodsListL{ float:left; width:3.75rem; height:8.8rem; background:url(../images/goods_list.jpg) no-repeat; background-size:100%;}
+.goodsListR{ float:left; width:11.25rem; padding-left:0.05rem; box-sizing:border-box;}
+.goodsListR li{ float:left; width:3.75rem; height:2.2rem; font-size:0.7rem; text-align:center; line-height:2.2rem;
+ border:0.05rem solid #eee; border-top:none; margin-left:-0.05rem; box-sizing:border-box;}
+.goodsListR li:nth-child(1),.goodsListR li:nth-child(2),.goodsListR li:nth-child(3){ border-top:0.05rem solid #eee;}
+.rotMoreBox { position:relative;}
+.rotMoreBox span{display:block; position:absolute; top:50%; right:0.5rem; margin-top:-0.275rem; width:0.325rem; height:0.55rem; background:url(../images/arrow.png) no-repeat; background-size:100%;}
+
+/*clientDown*/
+.clientDown{ width:15rem; margin:1.05rem auto 0;}
+.clientDown ul{ width:100%; display:-webkit-box;}
+.clientDown ul li{ -webkit-box-flex:1; height:4rem; text-align:center;}
+.clientPic{ width:100%; text-align:center; height:1.9rem;}
+.clientPic span{ display:inline-block; width:0.95rem; height:1.1rem; margin-top:0.8rem; background:url(../images/apple.png) no-repeat; background-size:100%;}
+.clientDown ul li p{ width:100%; margin-top:0.9rem; height:0.9rem; line-height:0.9rem; color:#fff; font-size:0.6rem;}
+.clientDown ul li:nth-child(1){ background:#38a4f1;}
+.clientDown ul li:nth-child(2){ background:#8bca11;}
+.clientDown ul li:nth-child(3){ background:#ff7404;}
+
+/*loginBox*/
+.loginBox{ width:16rem; height:2.2rem; margin:0.45rem auto 0; background:#f8f8f8;}
+.loginBox>div{ width:15rem; height:100%; margin:0 auto;}
+.loginBox a{font-size:0.8rem; font-weight:bold; line-height:2.2rem;}
+.login{ float:left; margin-left:0.25rem;}
+.register{ float:left; margin-left:1.2rem;}
+.loginBoxTop{ float:right;}
+.loginBoxTop a{ float:left; margin-right:0.45rem; }
+.triangle{ float:left; display:block; width:0; height:0; margin-right:0.2rem; margin-top:0.45rem; border:0.45rem dashed transparent; border-bottom:0.45rem dashed #999;}
+
+/*bottom*/
+.editionBox{ width:16rem; height:7rem; background:#eee;}
+.editionT{ width:100%; font-size:0.65rem; height:0.65rem; font-weight:bold; display:-webkit-box; padding-top:1.05rem;}
+.editionT p{ display:block; -webkit-box-flex:1; }
+.editionT p:nth-child(1){text-align:right; margin-right:0.325rem;}
+.editionT p:nth-child(2){ margin-left:0.325rem;}
+
+.numberTxt{ width:16rem; text-align:center; margin-top:0.8rem; font-size:0.5rem; color:#999;}
+/*fooder*/
+footer{ position:fixed; left:0; bottom:0; width:16rem; height:2.2rem; margin:0 auto; background:#f9f9f9;}
+footer nav,.footerBox{ width:16rem;margin:0 auto; height:100%;}
+.footerBox{ display:-webkit-box; -webkit-box-align:center;}
+.footerBox li{-webkit-box-flex:1; padding:0 0.8rem;}
+.footerBox li a{ display:block;}
+.footerL{ width:0.575rem; height:1.025rem; background:url(../images/footer_left.png) no-repeat center center; background-size:100%;}
+.footerR{ width:0.575rem; height:1.025rem; background:url(../images/footer_right.png) no-repeat; background-size:100%;}
+.footerC{ width:0.95rem; height:1.325rem; background:url(../images/footer_c.png) no-repeat; background-size:100%;}
+.bookMark{ width:1.3rem; height:1.175rem; background:url(../images/bookmark.png) no-repeat; background-size:100%;}
+.footerMore{ width:1.225rem; height:1.225rem; background:url(../images/footer_more.png) no-repeat; background-size:100%;}

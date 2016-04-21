@@ -1,0 +1,843 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>美团</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/list.css" />
+<script src="js/base.js"></script>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/move.js"></script>
+<script src="js/mt.js"></script>
+<script>
+$(function (){
+	meituan.public.navTop($('.j-nav-top'));//nav顶对+obj宽度
+	meituan.public.dropdDown($('.j-show-box>li'));//下拉
+	meituan.public.clicKnone($('.j-clicknone'));//点击消失
+	meituan.public.toUp($('#j-toUp'));//回到顶部
+	meituan.public.delayedLoad($('img'));//延迟加载
+	meituan.public.headSearch($('.j-search'));//头部搜索框
+	meituan.index.tab($('.j-tab'));//选项卡
+	meituan.index.tab($('.j-tab-b'));//选项卡
+	meituan.list.hoverblock($('.j-hover'));//移入显示
+	
+	
+});
+</script>
+</head>
+
+<body>
+
+	<!--head-->
+	<div class="headBg ">
+		<div class="headCenter clearfix center">
+			<ul class="left headL">
+				<li class="hl1">
+					<i class="left"></i>
+					<span class="left">收藏美团</span>
+				</li>
+				<li class="hl2">
+					<a href="javascript:;">登录</a>
+				</li>
+				<li class="hl3">
+					<a href="javascript:;">注册</a>
+				</li>
+				<li class="hl4">
+					<i class="left phone"></i>
+					<span class="left">手机美团</span>
+					<i class="left j"></i>
+				</li>
+			</ul>
+			
+			<ul class="right headR j-show-box">
+				<li class=" noborder">
+					<div class="contactBox">
+						我的订单
+					</div>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">我的美团</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">我的美团</a></li>
+						<li><a href="javascript:;">我的美团</a></li>
+						<li><a href="javascript:;">我的美团</a></li>
+						<li><a href="javascript:;">我的美团</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">最近浏览</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">最近浏览</a></li>
+						<li><a href="javascript:;">最近浏览</a></li>
+						<li><a href="javascript:;">最近浏览</a></li>
+						<li><a href="javascript:;">最近浏览</a></li>
+					</ul>
+				</li class="contact">
+				<li>
+					<div class="contactBox">
+						<i class="left baycar"></i>
+						<a href="javascript:;" class="left">购物车<span>0</span>件</a>
+						<i class="left j"></i>
+					</div>
+					
+				</li>
+				<li>
+					<div class="contactBox j-show-zIndex">
+						<a href="javascript:;" class="left">联系客服</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">联系客服</a></li>
+						<li><a href="javascript:;">联系客服</a></li>
+						<li><a href="javascript:;">联系客服</a></li>
+						<li><a href="javascript:;">联系客服</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">我是商家</a>
+						<i class="left j"></i>
+					</div>
+					<ul>
+						<li><a href="javascript:;">我是商家</a></li>
+						<li><a href="javascript:;">我是商家</a></li>
+						<li><a href="javascript:;">我是商家</a></li>
+						<li><a href="javascript:;">我是商家</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="contactBox">
+						<a href="javascript:;" class="left">更多</a>
+						<i class="left j"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--banner-->
+	<div class="center headBanner ">
+		<a href="javascript:;" class="j-clicknone"></a>
+		<img _src="images/headBanner.jpg" alt="headBanner" style="height:60px;" class="center"/>
+	</div>
+	
+	<!--logo-->
+	<div class="center logoBox  clearfix ">
+		<h1>
+			<a href="javascript:;">美团</a>
+		</h1>
+		
+		<div class="city">
+			<strong>北京</strong>
+			<div>切换城市</div>
+		</div>
+		
+		<div class="left j-search">
+			<div class="search">
+				<div class="searchL">
+					<span>团购</span>
+					<i class="j left"></i>
+				</div>
+				<div class="searchC j-search-text">
+					<input type="text"   />
+					<span>输入商品</span>
+				</div>	
+			</div>
+			<div class="searchR j-search-btn">
+				<input type="submit" />
+				<span>搜索</span>
+			</div>
+		</div>
+		
+		<ul class="logoBoxR">
+			<li>
+				<i class="back"></i><p class="back">不满1意免单</p>
+			</li>
+			<li>
+				<i class="back"></i><p class="back">不2满单</p>
+			</li>
+			<li>
+				<i class="back"></i><p class="back">不满3意单</p>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<!--nav--> <!--移入显示图标-->
+	<div class="center clearfix Marbottom">
+		<div class="left navL j-hover">
+			<h4>全部商品<i></i></h4>
+			<ul class="navList j-show-box j-hoverblock">
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop j-nav-top clearfix">
+						<ul>
+							<li class="tit">自1助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+						<ul>
+							<li class="tit">自2助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li class="j-nav-none contactW">
+					<h5>美食</h5>
+					<div class="self">
+ 					</div>
+					<div class="drop clearfix j-nav-top">
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自自助餐</p>
+						<p>自助助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h5>美食</h5>
+					<div class="self">
+						<p>自助餐</p>
+						<p>自助餐</p>
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+				<li class="navHeight">
+					<h5>美食</h5>
+					<div class="self">
+						<i></i>
+					</div>
+					<div class="drop clearfix j-nav-top">
+						<ul>
+							<li class="tit">自助餐</li>
+							<li>自助餐</li>
+							<li>自助餐</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="left">
+			<ul class="navTop clearfix">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="javascript:;">首首页页</a></li>
+				<li><a href="javascript:;">首页</a></li>
+				<li><a href="javascript:;">首页首页</a></li>
+				<li><a href="javascript:;">首首页页</a></li>
+			</ul>
+			
+		</div>
+	</div>
+	
+	
+	<!--all-->
+	<div class="center allMB">
+		<div class="allBox clearfix">
+			<div class="clearfix allTop">
+				<h3>全部</h3>
+				<ul class="allKind">
+					<li>
+						<i></i>
+						<div class="allCont">区域 ：海淀区</div>
+						<a href="javascript:;" class="allClose"></a>
+					</li>
+					<li>
+						<i></i>
+						<div class="allCont">商圈 ：中关村</div>
+						<a href="javascript:;" class="allClose"></a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="allBoxBot clearfix">
+				<h4>分类:</h4>
+				<ul class="allBotList">
+					<li><a href="javascript:;" class="current">全部</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+					<li><a href="javascript:;">家居用品</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!--default-->
+	<div class="center">
+		<div class="buttonStrip clearfix j-tab">
+			<ul class="j-tab-btn">
+				<li class="active">
+					<a href="javascript:;">
+						<span>默认</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span>默认</span>
+						<i class="downGray"></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span>默认</span>
+						<i class="upGray"></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span>默认</span>
+						<i class="downGray"></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span>默认</span>
+						<i class="downGray"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="center clearfix">
+			<ul class="listBox">
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="images/redPackets.jpg" alt="redPackets" />
+					<a href="javascript:;">
+						<h5>【50件包邮】侨丰硬纸红包</h5>
+						<p>卡扣形式，可反复使用，够高档</p>
+					</a>
+					<div class="price clearfix">
+						<span class="nPrice">￥</span>
+						<i>0</i>
+						<i>.</i>
+						<i>2</i>
+						<i>9</i>
+						<span class="storePrice">门店价</span>
+						<span class="costPrice">￥1.65</span>
+					</div>
+					<div class="priceBotBox clearfix">
+						<span class="sold">已售</span>
+						<span class="nSold">4141</span>
+						<div>
+							<span class="star">
+								<i></i>
+							</span>
+							<span class="cont">110人评论</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="downLoad">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	</div>
+	
+	<!--page-->
+	<div class="center pageBottom">
+		<ul class="pageBox clearfix">
+			<li class="active"><a href="javascritp:;">1</a></li>
+			<li><a href="javascritp:;">2</a></li>
+			<li><a href="javascritp:;">3</a></li>
+			<li><a href="javascritp:;">4</a></li>
+			<li><a href="javascritp:;">5</a></li>
+			<li><a href="javascritp:;">6</a></li>
+			<li><a href="javascritp:;">7</a></li>
+			<li><a href="javascritp:;">下一页</a></li>
+		</ul>
+	</div>
+	
+	<!--footer-->
+		
+	<div class="center marginFoot j-tab-b">
+		<ul class="mtType clearfix j-tab-btn">
+			<li class="active"><a href="javascript:;">团购分类</a></li>
+			<li><a href="javascript:;">热门地标</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+			<li><a href="javascript:;">今日新单</a></li>
+		</ul>
+		
+		<div class="mtTypeCont j-tab-box">
+			<ul class="kind clearfix active">
+				<li>美食团购</li>
+				<li>电影团购</li>
+				<li>休闲娱乐团购</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>望京团购</li>
+				<li>中关村团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+				<li>五道口团购</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			<ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul><ul class="kind clearfix">
+				<li>途中家家庭旅舍钟点房4小时，特惠大床房/温馨浪漫情侣房、你和她的二人世界2选1，</li>
+				<li>途中家家庭旅舍钟点房3小时，特惠大床房/魅力少爷房2选1，</li>
+				<li>北医三院女生青旅可爱女生床位入住1晚，</li>
+			</ul>
+			
+		</div>
+		
+	</div>
+	
+	
+	<!--line-->
+	<div class="line center marginFoot"></div>	
+	
+	<!--friLink-->
+	<div class="center clearfix">
+		<div class="friLink">
+			<dl>
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+			<dl>
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+			<dl>
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+			<dl class="user">
+				<dt>获取更新</dt>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+				<dd>邮件订阅</dd>
+			</dl>
+		</div>
+		<div class="friLiR">
+			<i></i>
+			<p class="friPhone">客服电话</p>
+			<p class="friPhoN">400-660-5335<span>(9:00-23:00)</span></p>
+			<p class="friBack">退款、退换货、查看美团券</p>
+			<a href="javascript:;" class="course">参考教程，轻松搞定!</a>
+		</div>
+	</div>
+	
+	<div class="friLiTop">
+		<p class="center ">©2015美团网团购 meituan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则</p>
+		<ul class="clearfix">
+			<li>
+				<a href="javascript:;" class="operate"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="Alipay"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="Tenpay"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="credible"></a>
+			</li>
+			<li>
+				<a href="javascript:;" class="consume"></a>
+			</li>
+		</ul>
+	</div>
+	
+	
+	
+	
+	
+	<!--toUp-->
+	<ul class="toUpBox">
+		<li><a href="javascript:;" class="toUp" id="j-toUp"></a></li>
+		<li><a href="javascript:;" class="nvestig"></a></li>
+		<li><a href="javascript:;" class="help"></a></li>
+		<li><a href="javascript:;" class="feedBack"></a></li>
+	</ul>
+	
+</body>
+</html>
